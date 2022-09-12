@@ -93,7 +93,6 @@ a:hover {
 .texture-paper::before {
     background: url("img/texture-paper.png");
     background-size: 280px 280px;
-    z-index: -1;
 }
 
 .b-parallax {
@@ -777,8 +776,7 @@ h4 {
 
 .tc-white {
     color: #FFF!important;
-    z-index: 1;
-    
+    position: relative;
 }
 
 .btn-atomic-tangerine {
@@ -815,7 +813,6 @@ h4 {
 
 .bg-dots-bg {
     background-image: url("img/dots-bg.png");
-    z-index: -1;
 }
 
 .bg-lines-h2-bg {
@@ -824,7 +821,6 @@ h4 {
 
 .bg-banniere {
     background-image: url("img/agence-la-panthere.webp");
-    z-index: -1;
 }
 
 .bg-presentation {
@@ -854,13 +850,13 @@ h4 {
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
     }
@@ -878,10 +874,6 @@ h4 {
         overflow-x: hidden;
         position: relative;
     }
-    .bloc {
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
-    }
     .bloc-group,
     .bloc-group .bloc {
         display: block;
@@ -890,8 +882,6 @@ h4 {
     .bloc-fill-screen .fill-bloc-top-edge,
     .bloc-fill-screen .fill-bloc-bottom-edge {
         padding: 0 20px;
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
     }
 }
 
@@ -1048,6 +1038,20 @@ h4 {
 }
 
 /* Optimisation */
+
+a:focus{
+    color: black!important;
+    border: black solid 3px;
+}
+.navbar-focus:focus{
+    color: black!important;
+    border: black solid;
+}
+.btn-focus:focus{
+    border: black solid;
+    background-color: #d16634!important;
+}
+
 strong {
     font-weight: 400;
 }
@@ -1112,8 +1116,5 @@ strong {
 @media (max-width: 767px){
 .adresse-horaire{
     margin-top: 20px;
-}
-.col-sm-6 img{
-    
 }
 }
