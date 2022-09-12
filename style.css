@@ -699,7 +699,7 @@ p {
     font-weight: 700;
 }
 
-.social {
+.flex-social {
     max-width: 400px;
     margin: auto auto auto auto;
 }
@@ -1041,7 +1041,7 @@ h4 {
 
 a:focus{
     color: black!important;
-    border: black solid 3px;
+    border: black solid 2px;
 }
 .navbar-focus:focus{
     color: black!important;
@@ -1051,7 +1051,6 @@ a:focus{
     border: black solid;
     background-color: #d16634!important;
 }
-
 strong {
     font-weight: 400;
 }
@@ -1087,14 +1086,22 @@ strong {
     align-items: center;
     height: 450px;
 }
-.social{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-left: 5%;
-}
 .col-sm-6 img{
     width: 100%;
+}
+.social{
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social:focus{
+text-decoration: none;
+}
+.flex-social{
+padding-left: 5%;
 }
 @media (max-width: 992px){
 .adresse-horaire iframe{
@@ -1103,9 +1110,6 @@ strong {
 }
 .form-opti{
     margin: 5% 0 5% 0;
-}
-.social{
-    padding-left: 0%;
 }
 .col-sm-6 a{
     display: flex;
@@ -1116,5 +1120,10 @@ strong {
 @media (max-width: 767px){
 .adresse-horaire{
     margin-top: 20px;
+}
+.flex-social{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 }
