@@ -93,6 +93,7 @@ a:hover {
 .texture-paper::before {
     background: url("img/texture-paper.png");
     background-size: 280px 280px;
+    z-index: -1;
 }
 
 .b-parallax {
@@ -133,7 +134,7 @@ a:hover {
 .d-bloc h5 a,
 .d-bloc h6 a,
 .d-bloc p a {
-    color: rgba(255, 255, 255, .6);
+    color:black;
 }
 
 .d-bloc .a-btn:hover,
@@ -677,7 +678,7 @@ a {
 }
 
 p {
-    font-size: 11px;
+    font-size: 17px;
 }
 
 .tight-width-whitespace {
@@ -736,7 +737,7 @@ h4 {
 }
 
 .white {
-    color: #FFFFFF!important;
+    color:white!important;
 }
 
 .portfolio-thumb {
@@ -775,17 +776,20 @@ h4 {
 }
 
 .tc-white {
-    color: #F3976C!important;
+    color: #FFF!important;
+    z-index: 1;
+    
 }
 
 .btn-atomic-tangerine {
     background: #F3976C;
-    color: #FFFFFF!important;
+    color: black!important;
 }
 
 .btn-atomic-tangerine:hover {
-    background: #c27956!important;
-    color: #FFFFFF!important;
+    background: #b14a1b!important;
+    color: black!important;
+    transform: scale(1.05);
 }
 
 .ltc-white {
@@ -811,6 +815,7 @@ h4 {
 
 .bg-dots-bg {
     background-image: url("img/dots-bg.png");
+    z-index: -1;
 }
 
 .bg-lines-h2-bg {
@@ -819,6 +824,7 @@ h4 {
 
 .bg-banniere {
     background-image: url("img/agence-la-panthere.webp");
+    z-index: -1;
 }
 
 .bg-presentation {
@@ -1039,4 +1045,75 @@ h4 {
     .bloc-mob-center-text {
         text-align: center;
     }
+}
+
+/* Optimisation */
+strong {
+    font-weight: 400;
+}
+.site-navigation a {
+    font-weight: 700;
+}
+.site-navigation a:hover{
+    color: #000000!important;
+    transform: scale(1.05);
+}
+.scrollToTop{
+    background-color: rgb(187, 187, 187);
+}
+.scrollToTop:hover{
+    background-color: #000000;
+}
+.black {
+    color:black!important;
+}
+.adresse-horaire a{
+    text-decoration: underline;
+    color: blue!important;
+}
+.adresse-horaire p{
+    font-weight: 500;
+}
+.form-required{
+    color: red!important;
+}
+.adresse-horaire{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 450px;
+}
+.social{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 5%;
+}
+.col-sm-6 img{
+    width: 100%;
+}
+@media (max-width: 992px){
+.adresse-horaire iframe{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.form-opti{
+    margin: 5% 0 5% 0;
+}
+.social{
+    padding-left: 0%;
+}
+.col-sm-6 a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+}
+@media (max-width: 767px){
+.adresse-horaire{
+    margin-top: 20px;
+}
+.col-sm-6 img{
+    
+}
 }
