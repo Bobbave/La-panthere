@@ -1079,7 +1079,7 @@ strong {
     font-weight: 500;
 }
 .form-required{
-    color: red!important;
+    color: rgb(110, 20, 20)!important;
 }
 .adresse-horaire{
     display: flex;
